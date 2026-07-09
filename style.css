@@ -6,9 +6,9 @@
 
 body{
     background-color: rgb(255, 255, 255);
-    font-family: sans-serif;
-    color: white;
-    background-color: rgb(47, 47, 47);
+    font-family:  Arial, sans-serif;
+    color:black;
+    background-color: white(47, 47, 47);
 }
 
 header{
@@ -23,8 +23,26 @@ header{
 
 }
 
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.nav-links a{
+    text-decoration: none;
+    color : black;
+    margin: 6px;
+    transition: transform ease 0.7s;
+}
+
+.nav-links a:hover{
+    transform:  translateY(-2px);
+    color: rgb(225, 51, 51);
+}
+
 nav{
-    border: 1px solid black;
+
     background-color:  rgb(238, 236, 236) ;
     color: black;
     height: auto;
@@ -34,22 +52,129 @@ nav{
     justify-content: center;
     align-items: center;
     justify-content: space-between;
+    border-radius: 10px;
 }
 
 .nav-icon{
     display: flex;
     flex-direction: row;
     gap: 10px;
-    border: 1px solid black;
     width: auto;
 }
 
-.nav-icon span{
-    border: 1px solid black;
-    padding: 3px;
-    border-radius: 45%;
+.nav-icon i{
+    color: black;
+    font-size: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.527);
+    padding: 6px;
+    border-radius: 20px;
 }
 
+.nav-icon i:hover{
+    color: white;
+    background-color: black;
+}
+
+
+/* this is css for  cart */
+#main-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+#cart-container{
+    position: static;
+    width: inherit;
+    flex-shrink: 0;
+    display: none;
+    height: 100vh;
+    overflow-y: auto;
+    margin: 10px;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.cart-header{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    padding: 10px;
+    background-color: #ffc107;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    place-items: center;
+}
+
+#itemDiv{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    place-items: center;
+}
+
+#itemDiv button{
+    background-color: #ffc107;
+    border: 1px solid #ffc107;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+#itemDiv .productDiv{
+    justify-self: start;
+}
+
+.productDiv{
+    display: flex;
+    align-items: center;
+}
+
+.itemTitle{
+    font-size: smaller;
+}
+
+.cartImg img{
+    width: 70px;
+    height: 85px;
+    padding: 4px;
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 16px;
+}
+
+.cartDetails{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#cart-total{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+#cartBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#clearCart-Btn{
+    background-color: rgb(232, 3, 3);
+    color: white;
+    font-weight: bolder;
+    width: 90px;
+    border: none;
+    padding: 4.5px;
+    border-radius: 10px;
+    transition: transform ease 0.5s;
+}
+
+#cartBtn button:hover{
+    transform: translateY(-2px) ;
+}
+/*down from here is style for product page*/
 #product-div{
     margin: 10px;
     padding: 10px;
@@ -60,6 +185,7 @@ nav{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    flex-grow: 1;    
 }
 
 .products{
@@ -75,7 +201,6 @@ nav{
     font-size: 12px;
     margin-bottom: 10px;
 }
-
 
 .img-div{
     width: 195px;
@@ -124,25 +249,30 @@ nav{
     margin-top: auto;   
 }
 
-.btn-div button{
+
+.btn-div button:hover{
+    transform: translateY(-2px) ;
+    
+}
+
+.add2Cart-btn{
+    color: black;
+    border: none;
+    width: 90px; 
+    padding: 4.5px;
+    border-radius: 10px;
+    background-color: #efd588e1;
+    transition: transform ease 0.5s;
+} 
+
+.buyNow-btn{
+    background-color: green;
+    color: white;
     width: 90px;
+    border: none;
     padding: 4.5px;
     border-radius: 10px;
     transition: transform ease 0.5s;
 }
 
-.btn-div button:hover{
-    transform: translateY(-2px) ;
-}
 
-.add2Cart-btn{
-    font-weight: bold;
-    border: 1px solid rgba(148, 148, 148, 0.729);
-} 
-
-.buyNow-btn{
-    background-color: black;
-    color: white;
-    font-weight: bolder;
-    border: 1px solid black;
-}
